@@ -84,9 +84,9 @@ elif label_type == 3:
     n_vids = 28
 
 if n_vids == 24:
-    save_dir = './runs_srt/raw_24video_batch24_dataset_%s_timeLen5_tf16_sf16_multiFact2_lr0.000700_wd0.015000_epochs80_randSeed%d_fold10_cls2' % (args.dataset, args.randSeed)
+    save_dir = 'runs_srt/raw_24video_batch24_dataset_%s_timeLen5_tf16_sf16_multiFact2_lr0.000700_wd0.015000_epochs80_randSeed%d_fold10_cls2' % (args.dataset, args.randSeed)
 elif n_vids == 28:
-    save_dir = './runs_srt/raw_28video_batch28_dataset_%s_timeLen5_tf16_sf16_multiFact2_lr0.000700_wd0.015000_epochs80_randSeed7_fold10_%s_c1.0_l0.1'% (args.dataset, label_type)
+    save_dir = 'runs_srt/raw_28video_batch28_dataset_%s_timeLen5_tf16_sf16_multiFact2_lr0.000700_wd0.015000_epochs80_randSeed7_fold10_%s_c1.0_l0.1'% (args.dataset, label_type)
 
 dataset = args.dataset
 if dataset == 'first':
