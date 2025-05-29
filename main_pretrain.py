@@ -174,7 +174,7 @@ if __name__ == '__main__':
 
     root_dir = './'
 
-    save_dir = os.path.join(r'E:\zzx\Clisa\Validation\Classification_validation\MSHCL_analysis\runs_srt', args.log_dir)
+    save_dir = os.path.join(r'.\runs_srt', args.log_dir)
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
 

@@ -90,7 +90,7 @@ if __name__ == '__main__':
     randomInit = False
     stratified = []
 
-    data_dir = r'E:\zzx\Clisa\Validation\Classification_validation\MSHCL_analysis\runs_srt/'
+    data_dir = r'.\runs_srt'
 
     if args.use_data == 'pretrained':
 
