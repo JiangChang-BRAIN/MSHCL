@@ -165,7 +165,7 @@ if __name__ == '__main__':
     print('n_per ', n_per)
 
     if label_type == 'cls2':
-        args.log_dir = r'raw_24video_batch%d_dataset_%s_timeLen%d_tf%d_sf%d_multiFact%d_lr%f_wd%f_epochs%d_randSeed%d_fold%d_%s_c%.1f_l%.1f' % (
+        args.log_dir = r'raw_24video_batch%d_dataset_%s_timelen%d_tf%d_sf%d_multiFact%d_lr%f_wd%f_epochs%d_randseed%d_fold%d_%s_c%.1f_l%.1f' % (
             args.batch_size_pretrain, args.dataset, timeLen, n_timeFilters, n_spatialFilters,
             multiFact, args.learning_rate, args.weight_decay, args.epochs_pretrain, args.randSeed, n_folds, label_type, args.c, args.lamda)
     else:
