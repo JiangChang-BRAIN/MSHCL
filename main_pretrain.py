@@ -155,7 +155,8 @@ if __name__ == '__main__':
 
     # Here I only select 10 fold for k-fold
     if args.training_fold == 'all':
-        folds_list = np.arange(n_folds-2)
+        # folds_list = np.arange(n_folds-2)
+        folds_list = np.arange(4, n_folds)
     else:
         # training_fold = 0~9
         folds_list = [int(args.training_fold)]
