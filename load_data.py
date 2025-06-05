@@ -13,7 +13,7 @@ def load_srt_raw_newPre(timeLen, timeStep, fs, channel_norm, time_norm, label_ty
     n_segs = int((n_points/fs - timeLen) / timeStep + 1)
     print('n_segs:', n_segs)
 
-    data_path = 'E:\zzx\Clisa\Validation\Classification_validation\Clisa_analysis\Clisa_data'
+    data_path = 'Clisa_data'
     data_paths = os.listdir(data_path)
     data_paths.sort()
     n_vids = 28; chn = 30; fs = 250; sec = 30;

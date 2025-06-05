@@ -155,7 +155,8 @@ if __name__ == '__main__':
 
     # Here I only select 10 fold for k-fold
     if args.training_fold == 'all':
-        folds_list = np.arange(n_folds-2)
+        # folds_list = np.arange(n_folds-2)
+        folds_list = np.arange(7, n_folds)
     else:
         # training_fold = 0~9
         folds_list = [int(args.training_fold)]
@@ -164,17 +165,17 @@ if __name__ == '__main__':
     print('n_per ', n_per)
 
     if label_type == 'cls2':
-        args.log_dir = r'raw_24video_batch%d_dataset_%s_timeLen%d_tf%d_sf%d_multiFact%d_lr%f_wd%f_epochs%d_randSeed%d_fold%d_%s_c%.1f_l%.1f' % (
+        args.log_dir = r'raw_24video_batch%d_dataset_%s_timelen%d_tf%d_sf%d_multiFact%d_lr%f_wd%f_epochs%d_randseed%d_fold%d_%s_c%.1f_l%.1f' % (
             args.batch_size_pretrain, args.dataset, timeLen, n_timeFilters, n_spatialFilters,
             multiFact, args.learning_rate, args.weight_decay, args.epochs_pretrain, args.randSeed, n_folds, label_type, args.c, args.lamda)
     else:
-        args.log_dir = r'raw_28video_batch%d_dataset_%s_timeLen%d_tf%d_sf%d_multiFact%d_lr%f_wd%f_epochs%d_randSeed%d_fold%d_%s_c%.1f_l%.1f' % (
+        args.log_dir = r'raw_28video_batch%d_dataset_%s_timelen%d_tf%d_sf%d_multiFact%d_lr%f_wd%f_epochs%d_randseed%d_fold%d_%s_c%.1f_l%.1f' % (
             args.batch_size_pretrain, args.dataset, timeLen, n_timeFilters, n_spatialFilters,
             multiFact, args.learning_rate, args.weight_decay, args.epochs_pretrain, args.randSeed, n_folds, label_type, args.c, args.lamda)
 
     root_dir = './'
 
-    save_dir = os.path.join(r'E:\zzx\Clisa\Validation\Classification_validation\MSHCL_analysis\runs_srt', args.log_dir)
+    save_dir = os.path.join(r'runs_srt', args.log_dir)
     if not os.path.exists(save_dir):
         os.makedirs(save_dir)
 
